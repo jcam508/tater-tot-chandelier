@@ -1,71 +1,798 @@
-<!-- BLOG POST 3 (Google Ads Campaign) -->
-<article class="card blog-body" id="post3" style="margin-top: 2rem;">
-  <div class="meta">
-    Published by <strong>John Campbell</strong> • Paid Search & Campaign Strategy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Tater Tot Chandelier™ – Personal Brand Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal brand blog for The Tater Tot Chandelier™, created by John Campbell as a creative digital marketing concept." />
+  <style>
+    :root {
+      --accent: #ffb347;
+      --accent-dark: #e0932e;
+      --bg-light: #f9fafb;
+      --text-main: #222;
+      --text-muted: #555;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #222, #444);
+      color: #fff;
+      padding: 1.5rem 1rem;
+      border-bottom: 4px solid var(--accent);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem 1rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-text h1 {
+      font-size: 2.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #000;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-text p {
+      margin-bottom: 1rem;
+    }
+
+    .hero-actions {
+      margin-top: 0.75rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent-dark);
+      color: #fff;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #c77b1e;
+    }
+
+    .hero-image {
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background-color: #111;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.6rem;
+    }
+
+    .section-intro {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    figure {
+      margin: 0 0 0.75rem 0;
+    }
+
+    figure img {
+      border-radius: 0.75rem;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .blog-body p {
+      margin-bottom: 0.9rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background-color: #fff7ec;
+    }
+
+    .references-list {
+      font-size: 0.9rem;
+    }
+
+    .references-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .toc-card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .toc-card ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .toc-card li {
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      background-color: #111;
+      color: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="brand-title">The Tater Tot Chandelier™</div>
+    <nav>
+      <ul>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#brand">Brand Story</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <h3>Why I’m Running Google Ads for the Totelier™ Charcuterie Chandelier</h3>
+<main>
+  <!-- HERO SECTION -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <span class="badge">Personal Brand • Digital Marketing</span>
+      <h1>The Tater Tot Chandelier™</h1>
+      <h2>Where food meets art, and creativity becomes a digital marketing strategy.</h2>
+      <p>
+        I’m <strong>John Campbell</strong>, and this is my personal brand experiment:
+        a playful, disruptive piece of cookware designed to hold and crisp tater tots
+        like a bunch of grapes on a vine. This brand is my canvas for exploring
+        strategic positioning, storytelling, and digital marketing in action.
+      </p>
+      <div class="hero-actions">
+        <a href="#blog" class="btn-primary">Read the Blog</a>
+      </div>
+    </div>
 
-  <p>
-    As Totelier™ develops from a concept into a launch-ready product, the biggest growth challenge is discoverability.
-    A tabletop “charcuterie chandelier” is visually unique, but many shoppers won’t search that exact phrase. Instead,
-    they use intent-based searches like “charcuterie centerpiece,” “party serving stand,” or “unique charcuterie display.”
-    Google Ads (formerly AdWords) helps Totelier™ appear at the exact moment people are actively looking for those
-    entertaining solutions. :contentReference[oaicite:1]{index=1}
-  </p>
+    <div class="hero-image">
+      <!-- Replace src with your own image URL -->
+      <img src="https://via.placeholder.com/600x400?text=Tater+Tot+Chandelier+Concept" alt="Concept illustration of the Tater Tot Chandelier shaped like a grape cluster." />
+    </div>
+  </section>
 
-  <h3>What Google Ads Are (In Simple Terms)</h3>
-  <p>
-    Google Ads is a paid search advertising platform where advertisers bid on keywords so their ads can appear on
-    Google Search (and potentially on the Display Network and YouTube). Key terms include CPC (cost-per-click),
-    impressions, Quality Score, and Ad Rank—factors that influence how often an ad shows and where it appears. :contentReference[oaicite:2]{index=2}
-  </p>
+  <!-- BRAND STORY / POSITIONING -->
+  <section id="brand">
+    <h2>Brand Story & Strategic Positioning</h2>
+    <p class="section-intro">
+      This section explains how the Tater Tot Chandelier™ functions as a
+      personal brand and a marketing case study, especially in the emerging
+      digital marketplace.
+    </p>
 
-  <h3>Why Google Ads Matter for Totelier™</h3>
-  <p>
-    Google Ads matters because it captures high-intent consumers—people already searching with purchase intent—and it
-    provides immediate visibility while longer-term SEO efforts build authority. The pillars of success include choosing
-    relevant keywords, writing strong ad copy, and delivering a quality landing page experience that matches user intent. :contentReference[oaicite:3]{index=3}
-  </p>
+    <div class="card grid-2">
+      <div>
+        <h3>What Is the Tater Tot Chandelier™?</h3>
+        <p>
+          The Tater Tot Chandelier™ is a cookware concept that turns a simple
+          comfort food into a visually striking centerpiece. Imagine a cluster
+          of metal “vines” shaped like grapes, each holding perfectly crisp tater
+          tots for serving at parties, game nights, or family gatherings.
+        </p>
+        <p>
+          It’s fun. It’s functional. And it’s designed for a world where
+          <strong>visual shareability</strong> and <strong>unique experiences</strong>
+          drive consumer interest.
+        </p>
+        <h3>My Unique Selling Proposition (USP)</h3>
+        <ul>
+          <li>Transforms everyday food into a conversation piece.</li>
+          <li>Optimized for social sharing and visual content (photos, reels, shorts).</li>
+          <li>Blends product design, entertainment, and personal branding.</li>
+          <li>Demonstrates creative thinking and strategic market positioning.</li>
+        </ul>
+      </div>
 
-  <h3>How I Chose Keywords</h3>
-  <p>
-    Keyword research is guided by Google Keyword Planner and search intent. For Totelier™, I focus on keywords that
-    align with real use-cases (hosting, wine night, gifting) and the type of product shoppers already understand.
-    Examples include:
-  </p>
-  <ul>
-    <li>charcuterie centerpiece</li>
-    <li>party serving stand</li>
-    <li>unique charcuterie display</li>
-    <li>wine night accessories</li>
-  </ul>
+      <div>
+        <h3>Digital Positioning</h3>
+        <p class="tagline">
+          In a digital marketplace defined by attention, this brand is built to be remembered.
+        </p>
+        <p>
+          The Tater Tot Chandelier™ sits at the intersection of
+          <strong>novelty</strong>, <strong>storytelling</strong>, and
+          <strong>digital-first marketing</strong>. It’s intentionally designed
+          to be “thumb-stopping” in feeds and highly shareable, making it ideal
+          for platforms like Instagram, TikTok, and Pinterest.
+        </p>
+        <p>
+          As a digital marketer, I use this concept to show how I think about
+          disruptive products, brand personality, and a <em>business-to-individual (B2I)</em>
+          approach—where experiences are tailored to the tastes and identities of each consumer.
+        </p>
+        <div class="pill-list">
+          <span class="pill">Disruptive Product</span>
+          <span class="pill">B2I Personalization</span>
+          <span class="pill">Attention Economy</span>
+          <span class="pill">Social Shareability</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>Campaign Setup Example (My Plan)</h3>
-  <ul>
-    <li><strong>Campaign Type:</strong> Search</li>
-    <li><strong>Location Targeting:</strong> United States</li>
-    <li><strong>Daily Budget:</strong> $10–$20</li>
-    <li><strong>Bidding:</strong> Start with Maximize Clicks → transition to Maximize Conversions</li>
-    <li><strong>Audience:</strong> Wine lovers, charcuterie fans, event hosts</li>
-  </ul>
-  <p>
-    This structure allows Totelier™ to gather performance data quickly and then optimize toward conversions once enough
-    click and search-term data is collected. :contentReference[oaicite:4]{index=4}
-  </p>
+  <!-- BLOG POSTS -->
+  <section id="blog">
+    <h2>Blog</h2>
+    <p class="section-intro">
+      Follow along as I use the Tater Tot Chandelier™ to explore personal branding, digital marketing strategy,
+      and the full journey of bringing a new product to life.
+    </p>
 
-  <h3>What I’ll Monitor in the Google Ads Dashboard</h3>
-  <p>
-    The Google Ads dashboard is where I’ll track results and continuously optimize. I will monitor impressions, clicks,
-    CTR, CPC, and conversions, then refine keywords and ad copy over time to improve efficiency and relevance. :contentReference[oaicite:5]{index=5}
-  </p>
+    <!-- TABLE OF CONTENTS -->
+    <div class="card toc-card" style="margin-bottom: 1.5rem;">
+      <h3>Blog Table of Contents</h3>
+      <ul>
+        <li><a href="#post1">Blog Post #1 – How a Tater Tot Chandelier Became My Digital Marketing Power Move</a></li>
+        <li><a href="#post2">Blog Post #2 – The Complete Journey: Bringing the Totelier™ From Idea to Launch</a></li>
+        <li><a href="#post3">Blog Post #3 – Google Ads Campaign for Totelier™ (Paid Search Plan)</a></li>
+      </ul>
+    </div>
 
-  <h3>How This Connects to My Website & Blog</h3>
-  <p>
-    Google Ads works best when clicks land on a page that builds trust fast. That’s why this website and blog are part of
-    the campaign: paid search drives traffic, while the blog explains the concept, supports credibility, and guides visitors
-    toward stronger purchase intent. :contentReference[oaicite:6]{index=6}
-  </p>
+    <!-- BLOG POST 1 -->
+    <article class="card blog-body" id="post1">
+      <div class="meta">
+        Published by <strong>John Campbell</strong> • Personal Brand Blog
+      </div>
 
-  <p><a href="#top">Back to top ↑</a></p>
-</article>
+      <figure>
+        <!-- Replace src with your own image URL -->
+        <img src="https://via.placeholder.com/800x450?text=Kitchen+Scene+with+Hanging+Cookware" alt="Stylized kitchen scene with a hanging cookware centerpiece." />
+        <figcaption>
+          Example of a kitchen environment where a Tater Tot Chandelier™ could
+          become the visual focal point. (Replace with your own image and cite appropriately.)
+        </figcaption>
+      </figure>
+
+      <h3>How a Tater Tot Chandelier Became My Digital Marketing Power Move</h3>
+      <p>
+        When I was challenged to create a personal brand that reflects who I am
+        as a marketer, I knew one thing: it had to be <strong>original</strong>,
+        <strong>visual</strong>, and a little bit unexpected. The Tater Tot
+        Chandelier™ was my answer—a whimsical yet strategic concept that turns a
+        familiar comfort food into a centerpiece designed for the digital age.
+      </p>
+      <p>
+        In a world where brands compete for a fraction of a second of attention,
+        products that are instantly recognizable and visually interesting have a
+        major advantage. The Tater Tot Chandelier™ does more than hold food;
+        it tells a story. That story becomes the foundation for branding,
+        content, and digital campaigns.
+      </p>
+
+      <h3>My Strategic Positioning as a Candidate</h3>
+      <p>
+        If I were sitting across from a hiring manager for a marketing role,
+        this is how I would present myself using this brand:
+      </p>
+      <ul>
+        <li>
+          <strong>Creator of Disruptive Ideas:</strong>
+          The Tater Tot Chandelier™ demonstrates that I don’t just follow trends;
+          I design concepts that can start conversations and generate attention.
+        </li>
+        <li>
+          <strong>Digital-First Mindset:</strong>
+          I think in terms of social media shareability, content formats, and
+          user journeys—from the first time someone sees the product in their feed
+          to the moment they show it off at a party.
+        </li>
+        <li>
+          <strong>Customer-Centered Thinking:</strong>
+          I consider how individuals—at the level of a “cohort of one”—connect with
+          products emotionally and socially, aligning with emerging B2I (business-to-individual)
+          strategies.
+        </li>
+        <li>
+          <strong>Strategic Communicator:</strong>
+          I like to explain complex digital trends in approachable language, whether
+          I’m talking about AI-driven personalization, pricing models, or global
+          e-commerce shifts.
+        </li>
+      </ul>
+
+      <h3>Digital Trends Behind the Brand</h3>
+      <p>
+        The idea behind this brand is informed by several important trends in
+        digital marketing. The rise of <strong>precision targeting</strong> and
+        <strong>AI-driven personalization</strong> allows marketers to tailor
+        product messages to individual interests (Kannan &amp; Li, 2017).
+        A highly visual, unusual product like the Tater Tot Chandelier™ fits
+        perfectly into a landscape where consumers discover products through
+        short-form videos, influencer content, and algorithmic recommendations.
+      </p>
+      <p>
+        Additionally, as the digital marketplace evolves, we see more emphasis
+        on <strong>value-based experiences</strong> rather than just price.
+        Even something as light-hearted as a tater tot centerpiece can provide
+        value by making gatherings more memorable, more photogenic, and more fun.
+        Those emotional and social benefits often drive willingness to share,
+        recommend, and ultimately purchase (Chaffey &amp; Ellis-Chadwick, 2022).
+      </p>
+
+      <figure>
+        <!-- Replace src with your own image URL -->
+        <img src="https://via.placeholder.com/800x450?text=Social+Media+Mockup" alt="Mockup of social media posts featuring a unique kitchen product." />
+        <figcaption>
+          Example concept of how the product could appear in social media feeds,
+          encouraging sharing and engagement.
+        </figcaption>
+      </figure>
+
+      <h3>Translating the Brand into Real-World Marketing Skills</h3>
+      <p>
+        This project is more than a theoretical exercise. It represents the way
+        I would approach marketing for any product:
+      </p>
+      <ul>
+        <li>Start with a bold, clear concept that stands out in the attention economy.</li>
+        <li>Build a story around the product that ties into lifestyle and identity.</li>
+        <li>Use digital tools—SEO, social media, analytics—to amplify the message.</li>
+        <li>Continuously learn from data, feedback, and user behavior.</li>
+      </ul>
+      <p>
+        As I continue through this course, I will use this brand to practice
+        web analytics, search engine optimization, content planning, and
+        performance measurement. In doing so, I’m not just imagining a product—I’m
+        actively training myself to think and operate like a modern digital marketer.
+      </p>
+
+      <h3>Takeaway: Why This Brand Matters</h3>
+      <p>
+        Ultimately, the Tater Tot Chandelier™ is a reminder that marketing is
+        about more than selling. It’s about <strong>creating meaning</strong>,
+        <strong>sparking emotion</strong>, and <strong>designing experiences</strong>
+        that people remember. By building and promoting this brand, I’m not only
+        developing a fun concept—I’m also building and testing my own personal
+        brand as a creative, strategic, and digitally fluent marketer.
+      </p>
+      <p><strong>Call to action:</strong> Follow along as I evolve this brand with
+        real digital marketing tactics—search optimization, analytics, and social
+        storytelling—throughout the course.
+      </p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </article>
+
+    <!-- BLOG POST 2 -->
+    <article class="card blog-body" id="post2" style="margin-top: 2rem;">
+      <div class="meta">
+        Published by <strong>John Campbell</strong> • Product Development Journey
+      </div>
+
+      <h3>The Complete Journey: Bringing the Totelier™ From Idea to Launch</h3>
+      <p>
+        This blog post documents the full roadmap for transforming the Totelier™—a grape-cluster-inspired
+        crisping rack—into a real, manufacturable product ready for launch.
+      </p>
+
+      <h3>1. Concept Development & Early Sketches</h3>
+      <p>
+        The journey started with a simple idea: suspend tater tots in a way that showcased them as both food and design.
+        The chandelier concept evolved into a more organic, grape-cluster silhouette, supported by quick sketches and
+        inspiration from vines, clusters, and sculptural cookware.
+      </p>
+
+      <h3>2. Digital Renderings & Product Visualization</h3>
+      <p>
+        Next, I created and refined digital renderings of the Totelier™. These visuals helped define the curvature of
+        the central vine, the branching structure, the number of prongs, and where decorative leaves should sit.
+        Renderings also ensured that the design was not just beautiful, but practical to manufacture and use in real kitchens.
+      </p>
+
+      <h3>3. Engineering Blueprint & Specifications</h3>
+      <p>
+        With the visuals in place, I translated the concept into an engineering blueprint. This includes exact measurements
+        for height, width, base diameter, rod diameters, prong length and angle, weld locations, and overall capacity
+        (roughly 22–26 tater tots). These specifications turn a creative idea into something a manufacturer can actually build.
+      </p>
+
+      <h3>4. Provisional Patent Preparation</h3>
+      <p>
+        To protect the unique combination of vine-inspired form and functional crisping, I prepared a provisional patent outline.
+        It covers the vine-shaped central stem, branching arms, individual prongs for small food items, a weighted base, and
+        the dual purpose of cooking and display. This step sets up the ability to move forward with “patent pending” status.
+      </p>
+
+      <h3>5. Manufacturer Sourcing & Prototyping</h3>
+      <p>
+        The next phase involves sourcing manufacturers who can handle CNC rod bending, TIG welding, and food-grade stainless steel work.
+        Early prototypes will validate heat distribution, stability, ease of cleaning, and compatibility with common ovens and air fryers.
+        Based on testing, I’ll refine the design for both form and function.
+      </p>
+
+      <h3>6. Branding & Identity Development</h3>
+      <p>
+        While the hardware is being engineered, I’m building out the Totelier™ brand. The identity balances playful creativity with
+        a premium culinary feel. This includes the name, logo concepts, color palette, typography, and messaging that focus on
+        “culinary sculpture” and “snack time elevated.”
+      </p>
+
+      <h3>7. Packaging Design</h3>
+      <p>
+        Packaging must communicate what the product is in seconds: a vertical, grape-cluster-style crisping rack for tots and appetizers.
+        I’m designing a box that features high-quality images, feature icons, usage instructions, and a concise brand story.
+        The visual style ties back to the brand’s vine and vineyard inspirations.
+      </p>
+
+      <h3>8. Amazon Listing & E-Commerce Setup</h3>
+      <p>
+        For launch, Amazon is a key channel. I’m preparing SEO-optimized titles, bullet points, detailed descriptions, and backend search terms.
+        I’m also planning an A+ content layout with lifestyle imagery, benefit-driven graphics, and a clear explanation of how Totelier™
+        solves the “uneven crisping” problem for small snacks.
+      </p>
+
+      <h3>9. Social Media & Viral Marketing Strategy</h3>
+      <p>
+        The Totelier™ is inherently photogenic, which makes it perfect for short-form content. I’ll create and collaborate on TikTok and
+        Instagram Reels showing people loading the rack with tots, watching them crisp, and serving them as a dramatic centerpiece.
+        The goal is to position the product as both functional and fun—something you’d want to show off at gatherings.
+      </p>
+
+      <h3>10. First Production Run & Quality Control</h3>
+      <p>
+        Once the prototype is finalized, I’ll green-light the first production run. This stage includes thorough quality checks:
+        weld strength, surface finishing, alignment of prongs, and packaging durability. I want every unit to feel solid, polished,
+        and worthy of its role as both cookware and table art.
+      </p>
+
+      <h3>11. Fulfillment & Logistics</h3>
+      <p>
+        To support smooth delivery, I’ll connect production with Amazon FBA and potentially a third-party logistics provider.
+        This ensures consistent shipping times, inventory tracking, and scalability as interest grows. Good logistics are just as
+        important as good design when you’re trying to build a real product business.
+      </p>
+
+      <h3>12. Official Launch & Iteration</h3>
+      <p>
+        Launch will involve coordinated timing between Amazon listing activation, influencer posts, paid ads, and social media content.
+        After release, I’ll watch reviews, messages, and analytics closely to learn how customers use the Totelier™, what they love,
+        and what could be improved. That feedback will help shape future versions, accessories, and even new product ideas.
+      </p>
+
+      <p>
+        <strong>Follow along</strong> as I continue to refine, test, manufacture, and bring the Totelier™ to market.
+        This journey is about more than one product—it’s a live case study in turning a creative concept into a tangible business.
+      </p>
+
+      <p><a href="#top">Back to top ↑</a></p>
+    </article>
+
+    <!-- BLOG POST 3 (NEW: Google Ads Campaign as separate blog post) -->
+    <article class="card blog-body" id="post3" style="margin-top: 2rem;">
+      <div class="meta">
+        Published by <strong>John Campbell</strong> • Google Ads / Paid Search Campaign
+      </div>
+
+      <h3>Google Ads Campaign for Totelier™ (Paid Search Plan)</h3>
+      <p>
+        As Totelier™ evolves from a concept into a launch-ready product, the largest challenge is discoverability.
+        A tabletop “charcuterie chandelier” is visually unique, but shoppers often search using more familiar,
+        intent-based phrases such as “charcuterie centerpiece,” “party serving stand,” or “unique charcuterie display.”
+        A Google Ads campaign helps Totelier™ appear at the exact moment customers are searching for those solutions.
+      </p>
+
+      <h3>What Google Ads Are (Terminology Included)</h3>
+      <p>
+        Google Ads (formerly Google AdWords) is Google’s paid advertising platform that lets brands display ads across
+        Google Search results (and optionally the Display Network and YouTube). Advertisers bid on <strong>keywords</strong>,
+        and many campaigns use <strong>CPC (cost-per-click)</strong> pricing, meaning costs occur when someone clicks an ad.
+        Performance is tracked using <strong>impressions</strong>, <strong>CTR (click-through rate)</strong>,
+        <strong>conversions</strong>, and <strong>Quality Score</strong>. In combination, bid and Quality Score influence
+        <strong>Ad Rank</strong> (where the ad appears on the page).
+      </p>
+
+      <h3>Why Paid Search Matters (Role + Pillars of Success)</h3>
+      <p>
+        Paid search captures high-intent users—people actively looking to buy or compare products. It also provides immediate
+        visibility while organic SEO grows over time. The pillars of Google Ad success include:
+      </p>
+      <ul>
+        <li><strong>Relevant keywords</strong> aligned to how customers actually search</li>
+        <li><strong>Compelling ad copy</strong> that clearly explains the value proposition</li>
+        <li><strong>Landing page experience</strong> that matches intent and builds trust quickly</li>
+        <li><strong>Quality Score</strong> improvement through relevance and user experience</li>
+        <li><strong>Ongoing optimization</strong> based on performance data</li>
+      </ul>
+
+      <h3>Keyword Research (How I Choose the Right Keywords)</h3>
+      <p>
+        For Totelier™, keyword selection is based on relevance, search intent, and conversion likelihood. I would use
+        Google Keyword Planner and Google Trends to validate demand and discover related terms. Example target keywords include:
+      </p>
+      <ul>
+        <li>charcuterie centerpiece</li>
+        <li>party serving stand</li>
+        <li>unique charcuterie display</li>
+        <li>wine night accessories</li>
+        <li>entertaining serving tray</li>
+      </ul>
+
+      <h3>Campaign Setup Example (Account + Targeting + Budget)</h3>
+      <ul>
+        <li><strong>Campaign Type:</strong> Search (primary campaign)</li>
+        <li><strong>Location Targeting:</strong> United States (initial rollout)</li>
+        <li><strong>Daily Budget:</strong> $10–$20 per day</li>
+        <li><strong>Delivery / Bidding:</strong> Start with Maximize Clicks; transition to Maximize Conversions after sufficient data</li>
+        <li><strong>Landing Page:</strong> This website and blog (product story + supporting content)</li>
+      </ul>
+
+      <h3>Illustrating the Google Ads Dashboard (What I Track)</h3>
+      <p>
+        The Google Ads dashboard supports continuous improvement through real-time reporting. I would monitor:
+      </p>
+      <ul>
+        <li><strong>Impressions</strong> (visibility)</li>
+        <li><strong>Clicks & CTR</strong> (relevance and engagement)</li>
+        <li><strong>CPC</strong> (cost efficiency)</li>
+        <li><strong>Conversions</strong> (desired outcomes such as purchases or email sign-ups)</li>
+        <li><strong>Search terms report</strong> (to refine keywords and add negatives)</li>
+      </ul>
+      <p>
+        Over time, I would A/B test ad copy, tighten keyword match types, improve Quality Score, and refine landing page messaging
+        to increase conversion performance.
+      </p>
+
+      <p><a href="#top">Back to top ↑</a></p>
+    </article>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <h2>About the Creator</h2>
+    <p class="section-intro">
+      A brief snapshot of how this brand reflects my skills and identity as an
+      emerging marketing professional.
+    </p>
+    <div class="card">
+      <p>
+        I am John Campbell, a student and aspiring digital marketing professional
+        who enjoys blending creativity with strategy. The Tater Tot Chandelier™
+        showcases my ability to think beyond conventional products and to design
+        concepts that naturally fit into the digital and social media landscape.
+      </p>
+      <p>
+        As I build out this site, I will continue to experiment with branding,
+        content creation, and analytics—treating this project as both a portfolio
+        piece and a real-time digital performance check on my marketing skills.
+      </p>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references">
+    <h2>References</h2>
+    <p class="section-intro">
+      Sample scholarly and professional sources that inform this blog and brand
+      concept. Format follows APA style.
+    </p>
+    <div class="card">
+      <ul class="references-list">
+        <li>
+          American Marketing Association. (2023).
+          <em>Digital marketing definitions and resources.</em>
+          https://www.ama.org/
+        </li>
+        <li>
+          Chaffey, D., &amp; Ellis-Chadwick, F. (2022).
+          <em>Digital marketing: Strategy, implementation, and practice</em> (8th ed.).
+          Pearson.
+        </li>
+        <li>
+          Kannan, P. K., &amp; Li, H. (2017).
+          Digital marketing: A framework, review and research agenda.
+          <em>International Journal of Research in Marketing, 34</em>(1), 22–45.
+        </li>
+        <li>
+          Google. (2024).
+          <em>Google Ads Help: About Google Ads.</em>
+          https://support.google.com/google-ads/
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> The Tater Tot Chandelier™ • Personal Brand Blog by John Campbell
+</footer>
+
+<script>
+  // Set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
